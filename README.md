@@ -1,1 +1,546 @@
-# aini-birthday
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 20th Birthday, Cut aini indra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --pink: #f9dce9;
+      --pink2: #f5c5d9;
+      --hot: #d95d91;
+      --ink: #63364d;
+      --cream: #fff9fc
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--pink);
+      color: var(--ink);
+      font-family: 'Playfair Display', serif;
+      overflow-x: hidden
+    }
+
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .2;
+      background-image: radial-gradient(#fff 1px, transparent 1px);
+      background-size: 19px 19px;
+      z-index: 0
+    }
+
+    section {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 70px 18px;
+      overflow: hidden
+    }
+
+    .script {
+      font-family: 'Great Vibes', cursive;
+      font-weight: 400;
+      color: #713b59
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #fbe8f1, #f5cddd)
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 9vw, 5.4rem);
+      line-height: 1.02;
+      margin: 0 0 10px;
+      text-shadow: 0 3px 0 #fff8
+    }
+
+    .hero .sub {
+      font-family: Poppins, sans-serif;
+      letter-spacing: 2px;
+      font-size: .75rem;
+      text-transform: uppercase;
+      margin: 10px 0 28px
+    }
+
+    .gift {
+      border: 0;
+      background: none;
+      font-size: clamp(6rem, 22vw, 10rem);
+      cursor: pointer;
+      filter: drop-shadow(0 12px 10px #b75c8640);
+      animation: bob 2.2s ease-in-out infinite;
+      transition: .3s
+    }
+
+    .gift:hover {
+      transform: scale(1.1) rotate(-5deg)
+    }
+
+    .hint {
+      font: 12px Poppins, sans-serif;
+      letter-spacing: 1px
+    }
+
+    @keyframes bob {
+      50% {
+        transform: translateY(-13px) rotate(3deg)
+      }
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+      animation: bob 1.5s infinite
+    }
+
+    .section-title {
+      font-size: clamp(2.7rem, 8vw, 4.5rem);
+      margin-bottom: 24px
+    }
+
+    .calendar-wrap {
+      max-width: 360px;
+      margin: 0 auto 26px;
+      background: #d95d91;
+      color: white;
+      border-radius: 0 0 22px 22px;
+      padding: 20px 18px 25px;
+      box-shadow: 0 12px 25px #8f3d6530
+    }
+
+    .month {
+      font: 600 1.1rem Poppins, sans-serif;
+      letter-spacing: 3px;
+      margin-bottom: 14px
+    }
+
+    .days,
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      font: 13px Poppins, sans-serif
+    }
+
+    .days {
+      opacity: .8;
+      margin-bottom: 10px
+    }
+
+    .dates span {
+      padding: 6px 0
+    }
+
+    .birthday {
+      position: relative;
+      font-weight: 700
+    }
+
+    .birthday:after {
+      content: "♡";
+      position: absolute;
+      inset: -8px -3px auto;
+      color: white;
+      font-size: 29px
+    }
+
+    .music {
+      max-width: 350px;
+      margin: auto;
+      background: #fff;
+      border-radius: 18px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 25px #8f3d6520;
+      font: 12px Poppins, sans-serif;
+      text-align: left
+    }
+
+    .music .disc {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e88ab2, #f9dce9);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      flex: none;
+      animation: spin 8s linear infinite
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .music button {
+      margin-left: auto;
+      border: 0;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      background: var(--hot);
+      color: white;
+      font-size: 16px;
+      cursor: pointer
+    }
+
+    .plaid {
+      background-color: #fff5fa;
+      background-image: linear-gradient(45deg, #f8dce9 25%, transparent 25%), linear-gradient(-45deg, #f8dce9 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f8dce9 75%), linear-gradient(-45deg, transparent 75%, #f8dce9 75%);
+      background-size: 34px 34px;
+      background-position: 0 0, 0 17px, 17px -17px, -17px 0
+    }
+
+    .photo-section {
+      padding-top: 60px;
+      padding-bottom: 75px
+    }
+
+    .photo-frame {
+      width: min(86vw, 340px);
+      margin: 0 auto 28px;
+      padding: 13px 13px 20px;
+      background: #fff;
+      border: 2px dashed #e9a9c5;
+      border-radius: 48% 48% 20px 20px;
+      box-shadow: 0 12px 25px #9e54711c;
+      transform: rotate(-1deg)
+    }
+
+    .photo-placeholder {
+      aspect-ratio: 4/4.6;
+      border-radius: 48% 48% 10px 10px;
+      background: linear-gradient(135deg, #f7d4e4, #fff0f6);
+      display: grid;
+      place-items: center;
+      color: #a65c7d;
+      font: 13px Poppins, sans-serif;
+      padding: 20px
+    }
+
+    .photo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit
+    }
+
+    .caption {
+      font: 13px Poppins, sans-serif;
+      margin-top: 12px
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 430px;
+      margin: 25px auto
+    }
+
+    .gallery .tile {
+      background: white;
+      padding: 8px 8px 22px;
+      box-shadow: 0 6px 15px #8e42601c;
+      transform: rotate(-2deg)
+    }
+
+    .gallery .tile:nth-child(even) {
+      transform: rotate(2deg)
+    }
+
+    .tile .photo-placeholder {
+      aspect-ratio: 1;
+      border-radius: 0
+    }
+
+    .tile small {
+      display: block;
+      font: 11px Poppins, sans-serif;
+      margin-top: 8px
+    }
+
+    .note {
+      max-width: 460px;
+      margin: auto;
+      background: #fffdfd;
+      border-radius: 24px;
+      padding: 30px 25px;
+      box-shadow: 0 12px 25px #9e54711c;
+      line-height: 1.85;
+      font-size: 1.02rem;
+      white-space: pre-line;
+      position: relative
+    }
+
+    .note:before {
+      content: "🎀";
+      position: absolute;
+      top: -27px;
+      left: calc(50% - 20px);
+      font-size: 38px
+    }
+
+    .letter {
+      max-width: 460px;
+      margin: 25px auto 0
+    }
+
+    .envelope {
+      position: relative;
+      margin: 25px auto;
+      width: min(82vw, 330px);
+      height: 205px;
+      background: #e98db4;
+      border-radius: 8px;
+      box-shadow: 0 12px 24px #8f3d6530;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      color: white;
+      font: 15px Poppins, sans-serif;
+      overflow: hidden
+    }
+
+    .envelope:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-left: 165px solid transparent;
+      border-right: 165px solid transparent;
+      border-top: 115px solid #f5b4ce;
+      transform-origin: top;
+      transition: .7s;
+      z-index: 2
+    }
+
+    .envelope.open:before {
+      transform: rotateX(180deg);
+      z-index: 0
+    }
+
+    .envelope .heart {
+      font-size: 42px;
+      z-index: 3
+    }
+
+    .letter-content {
+      display: none;
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      line-height: 1.8;
+      margin-top: 16px;
+      box-shadow: 0 8px 20px #9e54711c
+    }
+
+    .letter-content.show {
+      display: block;
+      animation: rise .8s ease
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    .closing {
+      background: linear-gradient(#f9dce9, #f4c5d9)
+    }
+
+    .closing .script {
+      font-size: clamp(3.4rem, 12vw, 6rem)
+    }
+
+    .signature {
+      font: 15px Poppins, sans-serif;
+      letter-spacing: 2px;
+      margin-top: 18px
+    }
+
+    .sparkle {
+      position: fixed;
+      z-index: 5;
+      pointer-events: none;
+      animation: fall linear forwards;
+      top: -30px
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0
+      }
+    }
+
+    button:focus-visible {
+      outline: 3px solid #8f3d65;
+      outline-offset: 4px
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      font: 11px Poppins, sans-serif;
+      color: #8c5870
+    }
+
+    @media(min-width:700px) {
+      section {
+        padding: 90px 24px
+      }
+
+      .gallery {
+        max-width: 500px;
+        gap: 22px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero" id="top">
+    <div class="sub">A little surprise made with love</div>
+    <h1 class="script">Happy Birthday<br>Pretty Aini</h1>
+    <p class="sub">Chapter 20 begins now ✨</p>
+    <button class="gift" aria-label="Buka hadiah" onclick="openGift()">🎁</button>
+    <div class="hint">TAP THE GIFT TO OPEN YOUR SURPRISE</div>
+    <div class="arrow">﹀</div>
+  </section>
+  <section id="birthday">
+    <h2 class="script section-title">A special day</h2>
+    <div class="calendar-wrap">
+      <div class="month">YOUR 20TH CHAPTER</div>
+      <div class="days"><b>S</b><b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b></div>
+      <div class="dates">
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>20</span><span>✨</span><span>🎀</span><span>💗</span><span>🌷</span><span>🦋</span><span>♡</span>
+      </div>
+    </div>
+    <p style="font:13px Poppins,sans-serif;margin-bottom:20px">Hari ini adalah tentang kamu, Aini 🤍</p>
+    <div class="music">
+      <div class="disc">♫</div>
+      <div><b>A little birthday melody</b><br><span style="color:#9d7890">Your special soundtrack</span></div>
+      <button onclick="toggleMusic()" id="musicBtn" aria-label="Putar musik">▶</button>
+    </div>
+    <audio id="song" loop></audio>
+    <p style="font:10px Poppins,sans-serif;color:#9b6e83;margin-top:9px">Tambahkan file musik bernama <b>music.mp3</b>
+      ke folder website untuk mengaktifkan musik.</p>
+  </section>
+  <section class="photo-section plaid">
+    <h2 class="script section-title">Pretty Girl</h2>
+    <div class="photo-frame">
+      <div class="photo-placeholder"><img src="gambar1.jpg" alt="Aini">
+      </div>
+      <div class="caption">Today, all the love is for you ♡</div>
+    </div>
+    <!-- gambar 4 baris -->
+    <div class="gallery">
+      <div class="tile">
+        <div class="photo-placeholder"><img src="gambar2.jpg" alt="aini"></div><small>sweet memories ♡</small>
+      </div>
+      <div class="tile">
+        <div class="photo-placeholder"><img src="gambar3.jpg" alt="aini"></div><small>little moments</small>
+      </div>
+      <div class="tile">
+        <div class="photo-placeholder"><img src="gambar5.jpg" alt="aini"></div><small>always lovely</small>
+      </div>
+      <div class="tile">
+        <div class="photo-placeholder"><img src="gambar4.jpg" alt="aini"></div><small>forever precious</small>
+      </div>
+    </div>
+    <p style="font:12px Poppins,sans-serif">Setiap foto punya cerita yang indah.</p>
+  </section>
+  <section>
+    <h2 class="script section-title">Just for you</h2>
+    <div class="note">Selamat ulang tahun yang ke-20, Kakakku tersayang.
+
+      Angka 20 ini hanyalah sebuah janji bahwa hal-hal terbaik dalam hidupmu baru saja akan dimulai. Terima kasih telah
+      tumbuh menjadi perempuan yang luar biasa dan selalu menginspirasiku.
+
+      Tetaplah bersinar dengan caramu sendiri, ya.
+
+      May your 20s be as lovely and beautiful as your soul.</div>
+  </section>
+  <section class="plaid">
+    <h2 class="script section-title">A little confession</h2>
+    <div class="note">Maaf ya, Kak, jikalau Dahlia sering buat Kakak marah. Tapi bagi Dahlia, Kakaklah yang paling hebat
+      dalam menghadapi adik-adik.
+
+      “You are truly the absolute best sister in the whole wide world”
+
+      Dahlia sangat sayang sama Kakak. 🫂✨</div>
+  </section>
+  <section class="letter">
+    <h2 class="script section-title">Open your letter</h2>
+    <p style="font:12px Poppins,sans-serif">Ada satu pesan lagi khusus untuk Kakak...</p>
+    <div class="envelope" id="envelope" onclick="openLetter()"><span class="heart"></span><span
+        style="position:absolute;bottom:20px;z-index:3">TAP TO OPEN</span></div>
+    <div class="letter-content" id="letterText">
+      <div style="font-size:35px"></div>
+      Sekali lagii...<br><span class="script" style="font-size:3rem">HAPPY BIRTHDAY</span><br><b>KAKAK AINI!</b><br><br>
+      Semoga umur 20 ini dipenuhi kebahagiaan, kesehatan, cinta, rezeki, dan semua hal baik yang Kakak impikan. Jangan
+      pernah berhenti jadi perempuan hebat yang selalu bersinar.<br><br>
+      With all my love,<br><b>Dahlia 🫰🏻</b>
+    </div>
+  </section>
+  <section class="closing">
+    <div style="font-size:42px">🎀🌷</div>
+    <h2 class="script">Closing</h2>
+    <p style="font-size:1.1rem">Keep blooming, keep smiling,<br>and keep being you.</p>
+    <div class="script" style="font-size:3.2rem">We love you, Aini ♡</div>
+    <div class="signature">MADE WITH LOVE BY DAHLIA</div>
+    <div style="font-size:38px;margin-top:25px">🤍✨</div>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+      style="margin-top:25px;border:1px solid #d98bad;background:#fff8fc;color:#8c4566;border-radius:30px;padding:12px 22px;font:12px Poppins,sans-serif">↟
+      REPLAY SURPRISE</button>
+  </section>
+  <footer>Made with love, just for Aini ♡</footer>
+  <script>
+    function openGift() { document.querySelector('#birthday').scrollIntoView({ behavior: 'smooth' }); burst(); }
+    function openLetter() { document.getElementById('envelope').classList.toggle('open'); document.getElementById('letterText').classList.toggle('show'); burst(); }
+    function toggleMusic() { const a = document.getElementById('song'), b = document.getElementById('musicBtn'); if (!a.src) { a.src = 'music.mp3'; } if (a.paused) { a.play().then(() => b.textContent = 'Ⅱ').catch(() => alert('Musik gagal diputar.')); } else { a.pause(); b.textContent = '▶'; } }
+    function burst() { for (let i = 0; i < 22; i++) { let e = document.createElement('span'); e.className = 'sparkle'; e.textContent = ['💗', '✨', '🌸', '🎀', '🤍'][Math.floor(Math.random() * 5)]; e.style.left = Math.random() * 100 + 'vw'; e.style.animationDuration = (3 + Math.random() * 3) + 's'; e.style.fontSize = (14 + Math.random() * 18) + 'px'; document.body.appendChild(e); setTimeout(() => e.remove(), 6500); } }
+    setInterval(() => { if (Math.random() > .45) { let e = document.createElement('span'); e.className = 'sparkle'; e.textContent = ['♡', '✧', '🌸'][Math.floor(Math.random() * 3)]; e.style.left = Math.random() * 100 + 'vw'; e.style.animationDuration = (6 + Math.random() * 4) + 's'; document.body.appendChild(e); setTimeout(() => e.remove(), 11000); } }, 900);
+  </script>
+</body>
+
+</html>
